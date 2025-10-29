@@ -1,24 +1,23 @@
-#Frenzen Code
-def calculate_sum(num1, num2):
-    
-    return num1 + num2
+# Summation of two numbers.
+def calculateSum(firstNumber, secondNumber):
+  return firstNumber + secondNumber
 
 
-def main():
-    print("This is a simple adder program.\n")
+# Main Program
+def main( ):
+  print("This is a simple adder program. \n")
 
-    try:
-        first_number = float(input("Enter first number: "))
-        second_number = float(input("Enter second number: "))
+  try:
+    firstNumber = float(input("Enter first number: "))
+    secondNumber = float(input("Enter second number: "))
 
-        result = calculate_sum(first_number, second_number)
-        print("The sum is:", result)
+    sum = calculateSum(firstNumber, secondNumber)
 
-    except ValueError:
-        print("Invalid input! Please enter valid numbers.")
-    except Exception as error:
-        print("An unexpected error occurred:", error)
+    print("\n The sum is :", sum)
+
+  except ValueError:
+    print("Value Error: Please input a valid number.")
 
 
-if __name__ == "__main__":
-    main()
+# Call the function at end.
+main() 
