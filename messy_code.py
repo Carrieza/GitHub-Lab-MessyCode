@@ -1,56 +1,58 @@
-# After: clear names with validation
+# First fixed-version, specified by team.
+
+# Summation of two numbers.
+def calculateSum(firstNumber, secondNumber):
+  return firstNumber + secondNumber
+
+
+# Main Program
+def main( ):
+  print("This is a simple adder program. \n")
+
+  try:
+    firstNumber = float(input("Enter first number: "))
+    secondNumber = float(input("Enter second number: "))
+
+    sum = calculateSum(firstNumber, secondNumber)
+
+    print("\n The sum is :", sum)
+
+  except ValueError:
+    print("Value Error: Please input a valid number.")
+
+
+# Call the function at end.
+main() 
+
+
+# Vien Code Accepted, Second fixed-version accepted
 """
-Simple Number Adder Program
-This program takes two numbers from the user and displays their sum.
+This program prompts the user for two numbers, calculates their sum,
+and prints the result. It attempts input conversion once and handles
+errors by exiting on failure.
 """
 
-def add_numbers(first_number, second_number):
-    """
-    Add two numbers together and return the result.
-    
-    Args:
-        first_number (int/float): The first number to add
-        second_number (int/float): The second number to add
-    
-    Returns:
-        int/float: The sum of the two numbers
-    """
-    return first_number + second_number
+def addNumbers(numOne, numTwo):
+    return numOne + numTwo
 
 
-def main():
-    """Main function to run the number adder program."""
-    print("=" * 40)
-    print("Simple Number Adder Program")
-    print("=" * 40)
-    
+def runSimpleAdder():
+    print("This is a simple adder program\n")
+
     try:
-        # Get first number with input validation
-        first_input = input("\nEnter the first number: ")
-        first_number = float(first_input)
+        firstNumberStr = input("Enter the first number: ")
+        secondNumberStr = input("Enter the second number: ")
+
+        firstNumber = int(firstNumberStr)
+        secondNumber = int(secondNumberStr)
         
-        # Get second number with input validation
-        second_input = input("Enter the second number: ")
-        second_number = float(second_input)
-        
-        # Calculate the sum
-        result = add_numbers(first_number, second_number)
-        
-        # Display the result
-        print("\n" + "-" * 40)
-        print(f"The sum is: {result}")
-        print("-" * 40)
+        totalSum = addNumbers(firstNumber, secondNumber)
+
+        print(f"The sum is: {totalSum}")
         
     except ValueError:
-        # Error handling for invalid input
-        print("\nError: Please enter valid numbers only!")
-        print("The program will now exit.")
-    
-    except Exception as error:
-        # Catch any other unexpected errors
-        print(f"\nAn unexpected error occurred: {error}")
+        print("Invalid input. Please enter only whole numbers. Exiting program.")
 
+runSimpleAdder()
 
-# Call the main function to start the program
-if __name__ == "__main__":
-    main()
+# Two versions are accepted, select one of the source code.
